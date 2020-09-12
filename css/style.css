@@ -1,0 +1,290 @@
+/* Глобальные стили */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 400;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header__list,
+.header__list-login,
+.header__nav-list,
+.catalog__list,
+.products__list,
+.manufacturers__list {
+  list-style-type: none;
+}
+
+h2 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+h3 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0 24px;
+}
+
+.button {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+  padding: 7px 36px;
+}
+
+/* Стили header */
+
+.header {
+  background: #f4f7f9;
+}
+
+.header__wrap {
+  background: #293449;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header__menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  background-color: #ee3643;
+  width: 220px;
+  height: 42px;
+  text-align: center;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+}
+
+.header__list-item {
+  text-align: center;
+}
+.header__list li:first-child {
+  width: 200px;
+}
+
+.header__list li:nth-child(2) {
+  width: 159px;
+}
+
+.header__list li:nth-child(3) {
+  width: 136px;
+}
+
+.header__list li:last-child {
+  width: 150px;
+}
+
+.header__info {
+  display: flex;
+}
+
+.header__info-text {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #ee3643;
+  width: 197px;
+}
+
+.header__info-contact {
+  font-size: 14px;
+  color: #32425c;
+  width: 250px;
+}
+
+.heder__info-tel {
+  font-size: 21px;
+  line-height: 30px;
+  color: #ee3643;
+}
+
+.header__list-login {
+  display: flex;
+}
+
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #293449;
+  padding: 0 53px;
+}
+
+.header__nav-list li {
+padding: 9px 0;
+}
+
+/* Стилизация main */
+/* Каталог */
+
+.catalog {
+  display: grid;
+  grid-template-rows: 144px 300px;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 320px 320px 320px;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.catalog__list-item {
+  min-height: 123px;
+  margin-right: 20px;
+  padding-left: 23px;
+  margin-bottom: 20px;
+}
+
+.catalog__list li:first-child {
+  background: #ffbf47;
+}
+.catalog__list li:nth-child(2) {
+  background: #3bbce3;
+}
+.catalog__list li:nth-child(3) {
+  background: #dc91d8;
+}
+.catalog__list li:nth-child(4) {
+  grid-column-start: 3;
+  grid-column-end: -1;
+  background: #8ed78f;
+
+}
+.catalog__list li:last-child {
+  background: #ffc047;
+  grid-column-start: 3;
+  grid-column-end: -1;
+}
+
+.catalog__slider {
+  color: #ffffff;
+  font-family: 'Cuprum', sans-serif;
+  width: 620px;
+  height: 266px;
+  background-color: #eaeaea;
+  background-image: url("../img/slide-image.png");
+  background-repeat: no-repeat;
+  background-position: -4px 0;
+  padding-left: 24px;
+  z-index: 2;
+}
+
+
+
+.catalog__slider-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 23px;
+  margin-bottom: 0;
+}
+
+.catalog__slider-text {
+  margin: 0;
+}
+
+.catalog__slider-button {
+  margin-top: 113px;
+  padding-left: 46px;
+  padding-right: 46px;
+}
+
+/* Продукты каталога */
+.products__info {
+  display: flex;
+  align-items: center;
+  background: #f9f5f0;
+  padding-left: 28px;
+  padding-right: 14px;
+}
+
+.products__info-title {
+  flex-grow: 1;
+}
+
+.products__info-button {
+  margin: 25px 0;
+}
+
+.products__list {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px;
+}
+
+.manufacturers__list {
+  display: grid;grid-template-columns: 220px 220px 220px 220px ;
+}
+
+
