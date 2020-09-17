@@ -1,5 +1,6 @@
-/* Глобальные стили */
-
+/* --------------------Глобальные стили---------------------
+------------------------------------------------------------
+---------------------------------------------------------- */
 html {
   box-sizing: border-box;
 }
@@ -12,7 +13,7 @@ html {
 
 body {
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 24px;
   color: #000000;
   font-weight: 400;
@@ -44,12 +45,17 @@ a {
   color: #ffffff;
 }
 
-.header__list,
-.header__list-login,
-.header__nav-list,
+.page-header__list,
+.page-header__registration,
+.main-nav__list,
 .catalog__list,
 .products__list,
-.manufacturers__list {
+.manufacturers__list,
+.services__list,
+.about__list,
+.footer__nav-list,
+.footer__nav-catalog,
+.footer__contact-list {
   list-style-type: none;
 }
 
@@ -66,7 +72,6 @@ h3 {
   font-family: 'Cuprum', sans-serif;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 400;
   color: #ffffff;
 }
 
@@ -88,13 +93,16 @@ h4 {
   padding: 7px 36px;
 }
 
-/* Стили header */
+/* --------------------Стилизация header--------------------
+------------------------------------------------------------
+---------------------------------------------------------- */
 
-.header {
+.page-header {
   background: #f4f7f9;
+  padding-bottom: 30px;
 }
 
-.header__wrap {
+.page-header__wrap {
   background: #293449;
 }
 
@@ -103,87 +111,127 @@ h4 {
   margin: 0 auto;
 }
 
-.header__menu {
+.main-menu {
   display: flex;
   flex-wrap: wrap;
 }
 
-.header__logo {
-  background-color: #ee3643;
+.page-header__logo {
+  text-align: center;
   width: 220px;
   height: 42px;
-  text-align: center;
+  background: #ee3643;
+  box-shadow: 0px 5px 0 0 rgba(0, 0, 0, 0.24), 0px 5px 0 0 #ee3643;
+
 }
 
-.header__list {
-  display: flex;
-  flex-wrap: wrap;
+.page-header__logo img {
+  margin: 12px;
+}
+
+
+.page-header__list {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 300px 129px 136px 150px;
   align-items: center;
+  padding: 0;
   margin: 0;
 }
 
-.header__list-item {
-  text-align: center;
-}
-.header__list li:first-child {
-  width: 200px;
+.page-header__svg path {
+  fill-opacity: 0.3;
 }
 
-.header__list li:nth-child(2) {
-  width: 159px;
+.page-header .page-header__item:first-child {
+  text-align: left;
+  padding-left: 19px;
 }
 
-.header__list li:nth-child(3) {
-  width: 136px;
+.page-header .page-header__item:last-child {
+  background: #63a63e;
+  padding: 9px 10px;
 }
 
-.header__list li:last-child {
-  width: 150px;
-}
-
-.header__info {
-  display: flex;
-}
-
-.header__info-text {
+.page-header__info {
   font-family: 'Cuprum', sans-serif;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
   color: #ee3643;
   width: 197px;
+  margin-top: 35px;
+  margin-left: 33px;
+  margin-right: 80px;
 }
 
-.header__info-contact {
-  font-size: 14px;
-  color: #32425c;
-  width: 250px;
+.page-header__contact {
+  text-align: center;
+  width: 290px;
+  margin-top: 46px;
 }
 
-.heder__info-tel {
+.page-header__tel {
   font-size: 21px;
   line-height: 30px;
   color: #ee3643;
+  border: 3px solid #ffffff;
+  padding-left: 70px;
+  padding-right: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-image: url(../img/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-position: 35px;
 }
 
-.header__list-login {
+.page-header__address {
+  font-size: 14px;
+  color: #32425c;
+  margin-top: 8px;
+}
+
+.page-header__registration {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  align-items: center;
   display: flex;
+  margin-top: 22px;
 }
 
-.header__nav-list {
+.regiatration-list__item {
+  background: #ffffff;
+  padding: 12px 20px;
+  margin-right: 10px;
+}
+
+.regiatration-list__item a {
+  color: #000000;
+}
+
+.main-nav__list {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: #293449;
+  background: #32425c;
+  box-shadow: 0px 5px 0 0 #293449;
   padding: 0 53px;
 }
 
-.header__nav-list li {
-padding: 9px 0;
+.main-nav__list li {
+padding: 15px 0;
 }
 
-/* Стилизация main */
-/* Каталог */
+/* --------------------Стилизация main----------------------
+------------------------------------------------------------
+---------------------------------------------------------- */
+
+/* -------------------------Каталог------------------------ */
 
 .catalog {
   display: grid;
@@ -198,32 +246,43 @@ padding: 9px 0;
   z-index: 1;
 }
 
-.catalog__list-item {
+.catalog__item {
   min-height: 123px;
   margin-right: 20px;
   padding-left: 23px;
   margin-bottom: 20px;
 }
 
-.catalog__list li:first-child {
+.catalo__title {
+  margin-top: 25px;
+  margin-bottom: 14px
+}
+
+.catalog__list .catalog__item:first-child {
   background: #ffbf47;
 }
-.catalog__list li:nth-child(2) {
+.catalog__list .catalog__item:nth-child(2) {
   background: #3bbce3;
 }
-.catalog__list li:nth-child(3) {
+.catalog__list .catalog__item:nth-child(3) {
   background: #dc91d8;
 }
-.catalog__list li:nth-child(4) {
+.catalog__list .catalog__item:nth-child(4) {
   grid-column-start: 3;
   grid-column-end: -1;
   background: #8ed78f;
-
 }
-.catalog__list li:last-child {
+.catalog__list .catalog__item:last-child {
   background: #ffc047;
   grid-column-start: 3;
   grid-column-end: -1;
+}
+
+.catalog__button {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 135px;
+  padding: 7px 0;
+
 }
 
 .catalog__slider {
@@ -238,8 +297,6 @@ padding: 9px 0;
   padding-left: 24px;
   z-index: 2;
 }
-
-
 
 .catalog__slider-title {
   font-size: 36px;
@@ -260,7 +317,8 @@ padding: 9px 0;
   padding-right: 46px;
 }
 
-/* Продукты каталога */
+/* --------------------Продукты каталога------------------ */
+
 .products__info {
   display: flex;
   align-items: center;
@@ -283,8 +341,123 @@ padding: 9px 0;
   grid-template-columns: 220px 220px 220px 220px;
 }
 
+/* Производители */
 .manufacturers__list {
-  display: grid;grid-template-columns: 220px 220px 220px 220px ;
+  display: grid;
+  grid-template-columns: 240px 240px 240px 240px;
+  grid-template-rows: 165px 165px;
+  padding: 0;
 }
 
+.manufacturers__list-item {
+  border: 1px solid #eaeaea;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* -------------------------Сервисы----------------------- */
+
+
+.services {
+  background: #f4f7f9;
+  padding-top: 64px;
+  padding-bottom: 70px;
+}
+
+.services__title {
+  color: #000000;
+}
+
+.services__text {
+  font-size: 13px;
+  width: 396px;
+}
+
+.services__wrap {
+  display: grid;
+  grid-template-columns: 240px 300px;
+}
+
+.services__list {
+  padding: 0;
+}
+
+.services__button {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: left;
+  background: #32425c;
+  box-shadow: 0 1px 0 0 #293449,
+              inset 0 1px 0 0 #405069;
+  border: none;
+  width: 240px;
+  padding: 14px 22px
+}
+
+.services__delivery-text {
+  font-size: 13px;
+}
+
+/* -------------------------О компании----------------------- */
+
+.about {
+  margin-top: 40px;
+}
+.about__wrap {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.about__title {
+  color: #000000;
+}
+
+.about__text {
+  font-size: 13px;
+}
+
+.about__list {
+  font-family: 'Cuprum', sans-serif;
+  padding: 0;
+}
+
+.about__map {
+  margin: 0;
+}
+
+
+/* --------------------Стилизация footer--------------------
+------------------------------------------------------------
+---------------------------------------------------------- */
+
+.footer__nav {
+  background: #32425c;
+}
+
+.footer__nav-wrap {
+  display: flex;
+}
+
+.footer__nav-list {
+  display: flex;
+}
+
+.footer__nav-catalog {
+  display: flex;
+}
+
+.footer__contact {
+  background: #293449;
+}
+
+.footer__contact-wrap {
+  display: flex;
+}
+
+.footer__contact-list {
+display: flex;
+}
 
