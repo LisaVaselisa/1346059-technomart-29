@@ -606,3 +606,7 @@ margin-right: 118px;
   text-transform: uppercase;
   display: flex;
 }
+
+fieldset {
+  border: none;
+}
