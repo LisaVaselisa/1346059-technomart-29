@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <!-- <link  href="css/normalize.css" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link  href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -106,7 +106,7 @@
           <h1 class="visually-hidden">Каталог товаров и доставка</h1>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <h3 class="catalo__title">Материалы</h3>
+              <h3 class="catalog__title">Материалы</h3>
               <button class="catalog__button button" type="button">На любой вкус</button>
             </li>
             <li class="catalog__item">
@@ -139,29 +139,29 @@
             <button class="products__info-button button">все популярные товары</button>
           </div>
           <ul class="products__list">
-            <li>
+            <li class="products__item">
               <img src="img/object-1.png" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
               <h4>Перфоратор BOSCH BFG 9000</h4>
-              <p>32500 Р.</p>
-              <button type="button">25500 Р.</button>
+              <p class="products__cost">32500 Р.</p>
+              <button class="products__btn" type="button">25500 Р.</button>
             </li>
-            <li>
+            <li class="products__item">
               <img src="img/object-2.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               <h4>Перфоратор BOSCH BFG 3000</h4>
-              <p>22500 Р.</p>
-              <button type="button">15500 Р.</button>
+              <p class="products__cost">22500 Р.</p>
+              <button class="products__btn" type="button">15500 Р.</button>
             </li>
-            <li>
+            <li class="products__item">
               <img src="img/object-3.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               <h4>Перфоратор BOSCH BFG 6000</h4>
-              <p>30500 Р.</p>
-              <button type="button">25500 Р.</button>
+              <p class="products__cost">30500 Р.</p>
+              <button class="products__btn" type="button">25500 Р.</button>
             </li>
-            <li>
+            <li class="products__item">
               <img src="img/object-4.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <h4>Перфоратор BOSCH BFG 2000</h4>
-              <p></p>
-              <button type="button">12500 Р.</button>
+              <!-- <p></p> -->
+              <button class="products__btn" type="button">12500 Р.</button>
             </li>
           </ul>
         </section>
@@ -172,28 +172,28 @@
             <button class="products__info-button button">все производители</button>
           </div>
           <ul class="manufacturers__list">
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
               <img src="img/logo-bosh.svg" width="126" height="37" alt="лого bosh">
             </li>
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
                 <img src="img/logo-makita.svg" width="123" height="40" alt="лого makita">
             </li>
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
                 <img src="img/logo-dewalt.svg" width="146" height="44" alt="лого DeWALT">
             </li>
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
                 <img src="img/logo-interscol.svg" width="200" height="76" alt="лого интерскол">
             </li>
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
                 <img src="img/logo-hitachi.svg" width="169" height="31" alt="лого hitachi">
             </li>
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
                 <img src="img/logo-lg.svg" width="121" height="73" alt="лого LG">
             </li>
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
                 <img src="img/logo-aeg.svg" width="151" height="98" alt="лого AEG">
             </li>
-            <li class="manufacturers__list-item">
+            <li class="manufacturers__item">
                 <img src="img/logo-metabo.svg" width="206" height="73" alt="лого metabo">
             </li>
           </ul>
@@ -256,80 +256,79 @@
     </main>
 
     <footer class="footer">
-      <section class="footer__nav">
+      <section class="footer-top">
+        <h2 class="visually-hidden">Новигация подвала</h2>
         <div class="container">
-
-          <div class="footer__nav-wrap">
+          <div class="footer-wrap">
             <div>
-              <a class="footer__nav-logo"><img src="img/logo-technomart-footer.svg" width="108" height="18" alt="Лого Техномарт"></a>
+              <a><img src="img/logo-technomart-footer.svg" width="220" height="68" alt="Лого Техномарт"></a>
               <div>
-                <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                <a class="tel" href="tel:+78125550555" aria-label="телефон">+7 (812) 555-05-55</a>
+                <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+                <a href="tel:+78125550555" aria-label="телефон">+7 (812) 555-05-55</a>
               </div>
             </div>
-
             <div>
-              <ul class="footer__nav-list">
-                <li>Компания</li>
-                <li>Новости</li>
-                <li>Каталог</li>
-                <li>Доставка</li>
-                <li>Контакты</li>
+              <ul class="footer-top__nav">
+                <li class="footer-top__nav-item">Компания</li>
+                <li class="footer-top__nav-item">Новости</li>
+                <li class="footer-top__nav-item">Каталог</li>
+                <li class="footer-top__nav-item">Доставка</li>
+                <li class="footer-top__nav-item">Контакты</li>
               </ul>
-              <ul class="footer__nav-catalog">
-                <li>Материалы</li>
-                <li>Техника</li>
-                <li>Инструмент</li>
-                <li>Спецпредложения</li>
+              <ul class="footer-top__catalog">
+                <li class="footer-top__catalog-item">Материалы</li>
+                <li class="footer-top__catalog-item">Техника</li>
+                <li class="footer-top__catalog-item">Инструмент</li>
+                <li class="footer-top__catalog-item">Спецпредложения</li>
               </ul>
             </div>
           </div>
-
-
-
         </div>
       </section>
 
-      <section class="footer__contact">
+      <section class="footer-bottom">
+        <h2 class="visually-hidden">Ссылки подвала</h2>
         <div class="container">
-
-          <div class="footer__contact-wrap">
-            <div>
-              <p>© 2010–2019 Компания «Техномарт»</p>
-              <p>Все права защищены</p>
+          <div class="footer-wrap">
+            <div class="footer-bottom__copyright">
+              <span class="footer-bottom__copyright-name">© 2010–2019 Компания «Техномарт»</span>
+              <span class="footer-bottom__copyright-text">Все права защищены</span>
             </div>
-            <ul class="footer__contact-list">
-              <li><a class="social-list__item" href="#" aria-label="Страница в Вконтакте">
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z" fill="#212A3A"/>
-                  <path d="M24.5403 25.7281C25.4609 25.4384 26.6396 27.6406 27.8943 28.4834C28.8361 29.1219 29.5573 28.9841 29.5573 28.9841L32.9017 28.9372C32.9017 28.9372 34.6495 28.8322 33.8233 27.4803C33.7549 27.3678 33.3389 26.4781 31.334 24.6472C29.2376 22.7319 29.5217 23.0422 32.0456 19.7309C33.5835 17.7125 34.1988 16.4797 34.0062 15.9547C33.8213 15.4494 32.6918 15.5806 32.6918 15.5806L28.9237 15.6059C28.5568 15.6069 28.2458 15.7175 28.1042 16.0887C28.1013 16.0925 27.5062 17.6506 26.7127 18.9753C25.0362 21.7775 24.367 21.9266 24.0896 21.7512C23.4531 21.3453 23.6139 20.1228 23.6139 19.2537C23.6139 16.5378 24.0299 15.4053 22.7993 15.1128C22.3881 15.0153 22.0876 14.9516 21.039 14.9422C19.6985 14.9225 18.5603 14.9422 17.9151 15.2506C17.4866 15.4597 17.1582 15.9181 17.3576 15.9444C17.6079 15.9772 18.1693 16.0944 18.4698 16.4937C18.8559 17.0112 18.8444 18.1709 18.8444 18.1709C18.8444 18.1709 19.0649 21.3687 18.3244 21.7653C17.8159 22.0372 17.1207 21.4822 15.6252 18.9378C14.8616 17.6366 14.2847 16.1984 14.2847 16.1984C14.2847 16.1984 14.173 15.9312 13.9708 15.785C13.7301 15.6116 13.393 15.5562 13.393 15.5562L9.81659 15.5787C9.81659 15.5787 9.27926 15.5937 9.08185 15.8244C8.90659 16.0287 9.06741 16.4506 9.06741 16.4506C9.06741 16.4506 11.8687 22.9016 15.0407 26.1509C17.9488 29.1341 21.2537 28.9362 21.2537 28.9362H22.7511C22.7511 28.9362 23.2027 28.8856 23.4339 28.6437C23.6496 28.4187 23.6399 27.9959 23.6399 27.9959C23.6399 27.9959 23.6101 26.0187 24.5403 25.7281Z" fill="white"/>
-                </svg>
-              </a></li>
-              <li><a class="social-list__item" href="#" aria-label="Страница в Фейсбуке">
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8938 1.4839C33.1232 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1232 42.1494 21.8938 42.1494C10.6643 42.1494 1.56108 33.0461 1.56108 21.8169C1.56108 10.5873 10.6643 1.4839 21.8938 1.4839Z" fill="#212A3A"/>
-                  <path d="M28 15V11H24C21.7909 11 20 12.7909 20 15V19H16V23H20V33H24V23H28V19H24V15H28Z" fill="white"/>
-                </svg>
-              </a></li>
-              <li><a class="social-list__item" href="#" aria-label="Страница в Инстаграмме">
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8938 1.4839C33.1233 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1233 42.1494 21.8938 42.1494C10.6643 42.1494 1.56112 33.0461 1.56112 21.8169C1.56112 10.5873 10.6643 1.4839 21.8938 1.4839Z" fill="#212A3A"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14 11H29C30.65 11 32 12.35 32 14V29C32 30.65 30.65 32 29 32H14C12.35 32 11 30.65 11 29V14C11 12.35 12.35 11 14 11ZM25 21.5C25 19.57 23.43 18 21.5 18C19.57 18 18 19.57 18 21.5C18 23.43 19.57 25 21.5 25C23.43 25 25 23.43 25 21.5ZM14 29V20H15.181C15.0626 20.4913 15.0019 20.9947 15 21.5C15 25.0899 17.9101 28 21.5 28C25.0899 28 28 25.0899 28 21.5C27.9986 20.9946 27.9379 20.4912 27.819 20H29V29H14ZM25 18H29V14H25V18Z" fill="white"/>
-                </svg>
-              </a></li>
+            <ul class="footer-bottom__social-list">
+              <li>
+                <a class="footer-bottom__social-link" href="https://vk.com/htmlacademy" target="_blank" aria-label="Страница в Вконтакте">
+                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z" fill="#212A3A"/>
+                    <path d="M24.5403 25.7281C25.4609 25.4384 26.6396 27.6406 27.8943 28.4834C28.8361 29.1219 29.5573 28.9841 29.5573 28.9841L32.9017 28.9372C32.9017 28.9372 34.6495 28.8322 33.8233 27.4803C33.7549 27.3678 33.3389 26.4781 31.334 24.6472C29.2376 22.7319 29.5217 23.0422 32.0456 19.7309C33.5835 17.7125 34.1988 16.4797 34.0062 15.9547C33.8213 15.4494 32.6918 15.5806 32.6918 15.5806L28.9237 15.6059C28.5568 15.6069 28.2458 15.7175 28.1042 16.0887C28.1013 16.0925 27.5062 17.6506 26.7127 18.9753C25.0362 21.7775 24.367 21.9266 24.0896 21.7512C23.4531 21.3453 23.6139 20.1228 23.6139 19.2537C23.6139 16.5378 24.0299 15.4053 22.7993 15.1128C22.3881 15.0153 22.0876 14.9516 21.039 14.9422C19.6985 14.9225 18.5603 14.9422 17.9151 15.2506C17.4866 15.4597 17.1582 15.9181 17.3576 15.9444C17.6079 15.9772 18.1693 16.0944 18.4698 16.4937C18.8559 17.0112 18.8444 18.1709 18.8444 18.1709C18.8444 18.1709 19.0649 21.3687 18.3244 21.7653C17.8159 22.0372 17.1207 21.4822 15.6252 18.9378C14.8616 17.6366 14.2847 16.1984 14.2847 16.1984C14.2847 16.1984 14.173 15.9312 13.9708 15.785C13.7301 15.6116 13.393 15.5562 13.393 15.5562L9.81659 15.5787C9.81659 15.5787 9.27926 15.5937 9.08185 15.8244C8.90659 16.0287 9.06741 16.4506 9.06741 16.4506C9.06741 16.4506 11.8687 22.9016 15.0407 26.1509C17.9488 29.1341 21.2537 28.9362 21.2537 28.9362H22.7511C22.7511 28.9362 23.2027 28.8856 23.4339 28.6437C23.6496 28.4187 23.6399 27.9959 23.6399 27.9959C23.6399 27.9959 23.6101 26.0187 24.5403 25.7281Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-bottom__social-link" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Страница в Фейсбуке">
+                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8938 1.4839C33.1232 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1232 42.1494 21.8938 42.1494C10.6643 42.1494 1.56108 33.0461 1.56108 21.8169C1.56108 10.5873 10.6643 1.4839 21.8938 1.4839Z" fill="#212A3A"/>
+                    <path d="M28 15V11H24C21.7909 11 20 12.7909 20 15V19H16V23H20V33H24V23H28V19H24V15H28Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-bottom__social-link" href="https://www.instagram.com/htmlacademy/" target="_blank" aria-label="Страница в Инстаграмме">
+                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8938 1.4839C33.1233 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1233 42.1494 21.8938 42.1494C10.6643 42.1494 1.56112 33.0461 1.56112 21.8169C1.56112 10.5873 10.6643 1.4839 21.8938 1.4839Z" fill="#212A3A"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 11H29C30.65 11 32 12.35 32 14V29C32 30.65 30.65 32 29 32H14C12.35 32 11 30.65 11 29V14C11 12.35 12.35 11 14 11ZM25 21.5C25 19.57 23.43 18 21.5 18C19.57 18 18 19.57 18 21.5C18 23.43 19.57 25 21.5 25C23.43 25 25 23.43 25 21.5ZM14 29V20H15.181C15.0626 20.4913 15.0019 20.9947 15 21.5C15 25.0899 17.9101 28 21.5 28C25.0899 28 28 25.0899 28 21.5C27.9986 20.9946 27.9379 20.4912 27.819 20H29V29H14ZM25 18H29V14H25V18Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
             </ul>
-            <div>
+            <div class="footer-bottom__links">
               <p>Обратная связь:</p>
-              <p>mail@htmlacademy.ru</p>
+              <span>mail@htmlacademy.ru</span>
             </div>
-            <div>
+            <div class="footer-bottom__site">
               <p>Разработано —</p>
-              <p>htmlacademy.ru</p>
+              <span>htmlacademy.ru</span>
             </div>
           </div>
-
-
-
         </div>
       </section>
     </footer>
