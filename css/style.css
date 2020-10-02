@@ -68,6 +68,7 @@
 
   /* click */
   --click-red: #ba2732;
+  --click-main-nav: #1d2739;
   --click-red-shadow: 0px 5px 0 0 rgba(0, 0, 0, 0.24), 0px 5px 0 0 #ba2732;
   --click-cart-btn: #518534;
   --click-catalog-btn: rgba(169, 169, 169, 0.3);
@@ -237,21 +238,49 @@ img {
   margin: 12px;
 }
 
+
+
 .page-header__list {
-  text-align: center;
   display: grid;
-  grid-template-columns: 300px 129px 136px 150px;
-  margin: 0;
+  grid-template-columns: 279px 150px 136px 150px;
 }
 
 .page-header__item {
-  height: 100%;
-  padding: 9px 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 5px 17px;
+  cursor: pointer;
 }
 
-.page-header__item:first-child {
-  text-align: left;
-  padding-left: 19px;
+.page-header__item:not(:last-child) {
+  padding-left: 42px;
+}
+
+.page-header__item--search {
+  justify-content: start;
+  left: 0;
+}
+/*
+.page-header__item--search::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/icon-search.svg");
+  opacity: 0.3;
+  width: 17px;
+  height: 17px;
+  top: 12px;
+  left: 17px;
+} */
+
+.page-header__svg {
+  position: absolute;
+  opacity: 0.5;
+  left: 12px;
+}
+
+.page-header__link {
+  margin: auto 0;
 }
 
 .page-header__item:last-child {
@@ -262,9 +291,7 @@ img {
   background: var(--body-red);
 }
 
-.page-header__svg path {
-  fill-opacity: 0.3;
-}
+
 
 .page-header__info {
   font-size: 16px;
@@ -318,26 +345,43 @@ img {
   margin-right: 10px;
 }
 
-.regiatration-list__item a {
-  color: inherit;
+.regiatration-list__link {
+  color: var(--body-black);
 }
 
 .main-nav__list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   background-color: var(--body-bluelight);
   box-shadow: var(--header-blue-shadow);
-  padding: 0 53px;
+  padding: 0 25px;
 }
 
 .main-nav__item {
-padding: 15px 0;
+  padding: 15px 28px;
 }
 
 .page-header__logo-link:active {
   background-color: var(--click-red);
   box-shadow: var(--click-red-shadow);
+}
+
+.main-nav__item:hover,
+.main-nav__item:focus {
+  background-color: var(--body-bluedark);
+}
+
+.main-nav__item:active {
+  background-color: var(--click-main-nav);
+}
+
+.page-header__item:active,
+.main-nav__link:active {
+  opacity: 0.5;
+}
+
+.page-header__item:hover .page-header__svg path {
+  fill: var(--body-white);
 }
 
 /* --------------------Стилизация main----------------------
