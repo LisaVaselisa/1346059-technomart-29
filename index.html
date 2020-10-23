@@ -418,22 +418,23 @@
       <button class="popup-map__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
 
-    <section>
-      <button id="checkout">Оформить заказ</button>
-      <button id="clear-cart">Очистить корзину</button>
-      <div id="cart-content"></div>
-    </section>
+
 
     <section class="popup-cart popup">
       <h4 class="popup-cart__title">Товар добавлен в корзину!</h4>
       <ul class="popup-cart__btn">
-        <a class="popup-cart__btn-get button" id="checkout">Оформить заказ</a>
+        <a class="popup-cart__btn-form button" id="checkout">Оформить заказ</a>
         <button class="popup-cart__btn-next" type="button">Продолжить покупки</button>
       </div>
       <button class="popup-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
 
-    <section id="out" class="modal-cart popup"></section>
+
+    <section class="modal-cart popup" id="cart-content">
+      <button id="clear-cart">Очистить корзину</button>
+    </section>
+
+
 
     <script src="js/cart.js"></script>
     <script src="js/popup.js"></script>

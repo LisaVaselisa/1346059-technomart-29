@@ -1827,16 +1827,12 @@ img {
 
 .modal-cart {
   background: var(--body-white);
-  width: 420px;
+  width: 620px;
   border-top: 7px solid var(--body-red);
 }
 
 .modal-cart__wrap {
   padding: 0 40px;
-}
-
-.modal-cart__img {
-  display: block;
 }
 
 .modal-cart__btn {
