@@ -120,14 +120,16 @@
             <h3 class="catalog__title middle-title">Доставка</h3>
             <a class="catalog__link button" href="#">Бесплатно</a>
           </article>
-          <article class="catalog__slider">
-            <img class="catalog__img" src="img/slide-image.jpg" width="620" height="266" alt="фоновая картинка">
-            <div class="catalog__info">
-              <p class="catalog__slider-title">Перфораторы</p>
-              <p class="catalog__slider-text">Настоящие мужские игрушки</p>
-              <button class="catalog__slider-arrow catalog__slider-arrow--left" type="button"></button>
-              <button class="catalog__slider-arrow catalog__slider-arrow--right" type="button"></button>
-              <a class="catalog__slider-link button" href="#">Открыть каталог</a>
+          <article class="slider">
+            <img class="slider__img" src="img/slide-image.jpg" width="620" height="266" alt="фоновая картинка">
+            <div class="slider__wrap">
+              <div class="slider__info">
+                <p class="slider__title">Перфораторы</p>
+                <p class="slider__text">Настоящие мужские игрушки</p>
+              </div>
+                <button class="slider__arrow slider__arrow--left" type="button"></button>
+                <button class="slider__arrow slider__arrow--right" type="button"></button>
+                <a class="slider__link button" href="#">Открыть каталог</a>
             </div>
           </article>
         </section>
@@ -192,7 +194,7 @@
         <section class="manufacturers">
           <div class="manufacturers__info">
             <h2 class="manufacturers__info-title main-title">Популярные производители:</h2>
-            <button class="manufacturers__info-button button">все производители</button>
+            <button class="manufacturers__info-btn button">все производители</button>
           </div>
           <ul class="manufacturers__list">
             <li class="manufacturers__item">
@@ -421,12 +423,14 @@
     <section class="popup-cart popup">
       <h4 class="popup-cart__title">Товар добавлен в корзину!</h4>
       <ul class="popup-cart__btn">
-        <a class="popup-cart__btn-form button" id="checkout">Оформить заказ</a>
+        <a class="popup-cart__btn-form button" id="form">Оформить заказ</a>
         <button class="popup-cart__btn-next" type="button">Продолжить покупки</button>
       </div>
       <button class="popup-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="modal-cart popup" id="cart-content"></section>
+    <section class="modal-cart popup" id="cart-content">
+      <button class="modal-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
+    </section>
 
     <script src="js/cart.js"></script>
     <script src="js/popup.js"></script>

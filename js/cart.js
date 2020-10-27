@@ -53,10 +53,9 @@ function addEvent(element, type, handler) {
     });
 }
 
-
 // Получаем данные из LocalStorage
 function getCartData() {
-	return JSON.parse(localStorage.getItem('products'));
+  return JSON.parse(localStorage.getItem('products'));
 }
 
 // Записываем данные в LocalStorage
@@ -65,8 +64,7 @@ function setCartData(arrey) {
   return false;
 }
 
-// Добавляем товар в корзину
-function addToCart(event) {
+function addToCart() {
   this.disabled = true; // блокируем кнопку на время операции с корзиной
   var cartData = getCartData() || {}; // получаем данные корзины или создаём новый объект, если данных еще нет
   var parentBox = this.parentNode.parentNode.parentNode;// родительский элемент кнопки
@@ -79,6 +77,7 @@ function addToCart(event) {
   } else { // если товара в корзине еще нет, то добавляем в объект
     cartData[productId] = [productTitle, productPrice, 1];
   }
+
   // Обновляем данные в LocalStorage
   if (!setCartData(cartData)) {
   this.disabled = false;
@@ -91,58 +90,56 @@ function addToCart(event) {
 
 // Добавляем товар в корзину
 for(var i = 0; i < itemBox.length; i++){
-	addEvent(itemBox[i].querySelector('.product-card__buy'), 'click', addToCart);
+  addEvent(itemBox[i].querySelector('.product-card__buy'), 'click', addToCart);
 }
 
 // Открываем корзину со списком добавленных товаров
-function openCart(event) {
+function openCart() {
   var cartData = getCartData(); // вытаскиваем все данные корзины
   var totalItems = '';
   var totalCount = 0;
   var totalSum = 0;
-	// если что-то в корзине уже есть, начинаем формировать данные для вывода
-	if (cartData !== null) {
-    totalItems = '<table class="modal-cart"><tr><th>Наименование товара</th> <th>Цена</th> <th>Кол-во</th> <th>Изменить кол-во</th></tr>';
-		for (var items in cartData) {
+  // если что-то в корзине уже есть, начинаем формировать данные для вывода
+  if (cartData !== null) {
+    totalItems = '<table class="modal-cart__title"><tr><th>Наименование товара</th> <th>Цена</th> <th>Кол-во</th> <th>Изменить кол-во</th></tr>';
+    for (var items in cartData) {
       totalItems += '<tr>';
-			for (var i = 0; i < cartData[items].length; i++) {
-				totalItems += '<td>' + cartData[items][i] + '</td>';
+      for (var i = 0; i < cartData[items].length; i++) {
+        totalItems += '<td>' + cartData[items][i] + '</td>';
       }
-			totalSum += cartData[items][1] * cartData[items][2];
-			totalCount += cartData[items][2];
-      totalItems += '<td><button class="modal-cart__btn-plus" type="text" aria-label="Увеличить количество" data-id="' + items + '">+</button><button class="modal-cart__btn-minus" type="button" aria-label="Увеличить количество" data-id="' + items + '">-</button></td>';
+      totalSum += cartData[items][1] * cartData[items][2];
+      totalCount += cartData[items][2];
+      totalItems += '<td><button class="modal-cart__btn-plus" type="text" aria-label="Увеличить количество" data-id="' + items + '">+</button><button class="modal-cart__btn-minus" type="button" aria-label="Увеличить количество" data-id="' + items + '">-</button><th></th></td>';
+      totalItems += '<td><button class="modal-cart__btn-close" type="button" data-id="'+ items +'"></button></td';
       totalItems += '</tr>';
     }
-		totalItems += '<tr><td><strong>Итого</strong></td><td><span id="total_sum">'+ totalSum +'</span> Р.</td><td><span id="total-count">'+ totalCount +'</span> шт.</td><td></td></tr>';
+    totalItems += '<tr><td><strong>Итого</strong></td><td><span>'+ totalSum +'</span> Р.</td><td><span>'+ totalCount +'</span> шт.</td><td></td></tr>';
     totalItems += '<table>';
-    totalItems += '<div class="modal-cart__btn"><button class="popup-cart__btn-clear button" id="clear-cart" type="button">Очистить корзину</button></div>';
     cartCont.innerHTML = totalItems;
-	} else {
-		// если в корзине пусто, то сигнализируем об этом
-    cartCont.innerHTML = 'В корзине пусто!';
   }
-	return false;
+  else {
+    cartCont.innerHTML = 'В корзине пусто!';  //если в корзине пусто, то сигнализируем об этом
+  }
+  return false;
 }
 
-/* Открыть корзину */
-addEvent(document.getElementById('checkout'), 'click', openCart);
+// Открыть корзину
+addEvent(document.getElementById('form'), 'click', openCart);
 
-/* Плюсуем товар */
 addEvent(document.body, 'click', function (element) {
+  var productId = element.target.getAttribute('data-id');
+  var cartData = getCartData();
+  // Плюсуем товар
   if (element.target.className === 'modal-cart__btn-plus') {
-    var productId = element.target.getAttribute('data-id');
-    var cartData = getCartData();
     if (cartData.hasOwnProperty(productId)) {
       cartData[productId][2] += 1; // добавляем +1 к количеству
-      if (!setCartData(cartData)) {// Обновляем данные в LocalStorage
-        document.getElementById('checkout').click();
-      }
+    }
+    if (!setCartData(cartData)) {// Обновляем данные в LocalStorage
+      document.getElementById('form').click();
     }
   }
-  /* Минусуем */
+  // Минусуем товар
   if (element.target.className === 'modal-cart__btn-minus') {
-    var productId = element.target.getAttribute('data-id');
-    var cartData = getCartData();
     if (cartData.hasOwnProperty(productId)) {
       if (cartData[productId][2] > 1) { // если товар в количестве больше 1, то вычитаем
         cartData[productId][2] -= 1;
@@ -150,46 +147,25 @@ addEvent(document.body, 'click', function (element) {
         cartData[productId] - 1 == 0;
         delete cartData[productId];
       }
-      if (!setCartData(cartData)) {// Обновляем данные в LocalStorage
-        document.getElementById('checkout').click(); // у меня корзина всегда открыта
-      }
+    }
+    if (!setCartData(cartData)) {// Обновляем данные в LocalStorage
+      document.getElementById('form').click();
     }
   }
-}, false
-);
-
-// /* Очистить корзину */
-// addEvent(document.getElementById('clear-cart'), 'click', function(element){
-// 	localStorage.removeItem('products');
-// 	cartCont.innerHTML = 'Корзина очишена.';
-// });
-
-
-// addEvent(document.getElementById('clear-cart'), 'click', function(element){
-// 	localStorage.removeItem('products');
-// 	cartCont.innerHTML = 'Корзина очишена.';
-// });
-
-
-
-// if (element.target.className === 'modal-cart__btn-clear') {
-//   var productId = element.target.getAttribute('data-id');
-//   var cartData = getCartData();
-//   remove.cartData[products];
-//   localStorage.removeItem('products');
-//   cartCont.innerHTML = 'Корзина очишена.';
-// }
-
-
-
+  // Удаляем товар
+  if (element.target.className === 'modal-cart__btn-close') {
+    if (cartData.hasOwnProperty(productId)) {
+      delete cartData[productId];
+    }
+    if (!setCartData(cartData)) {// Обновляем данные в LocalStorage
+      document.getElementById('form').click();
+    }
+  }
+}, false);
 
 // // ('button.modal-cart__btn-close').on('click', closeToCart);
 
 // // };
-
-
-
-
 
 
 // // closeModalCart.addEventListener("click", function (evt) {
@@ -197,7 +173,5 @@ addEvent(document.body, 'click', function (element) {
 // //   modalCart.classList.remove("modal-cart__show");
 // // });
 
-
 //   out += '</div>';
 //   out += '<button class="modal-cart__btn-close btn-close"></button>';
-
