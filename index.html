@@ -53,9 +53,10 @@
             <a class="info-bar__tel" href="tel:+78125550555" aria-label="телефон">+7 (812) 555-05-55</a>
             <address class="info-bar__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
-          <ul class="regiatration-list">
+
+          <ul class="regiatration-list registration">
             <li class="regiatration-list__item">
-              <a class="regiatration-list__link" href="#">
+              <a class="regiatration-list__link regiatration-list__link--exit" href="#">
                 <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
                   <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
@@ -101,6 +102,7 @@
         <section class="catalog">
           <h1 class="visually-hidden">Каталог товаров и доставка</h1>
           <article class="catalog__item catalog__item--materials">
+            <ins class="catalog__item__marker marker" title="Новинка">New</ins>
             <h3 class="catalog__title middle-title">Материалы</h3>
             <a class="catalog__link button" href="#">На любой вкус</a>
           </article>
@@ -142,52 +144,52 @@
           <ul class="product-card">
             <li class="product-card__item">
               <div class="product-card__photo">
-                <img class="product-card__img" src="img/object-1.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/bosh-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
                 <div class="product-card__btns">
                   <button class="product-card__buy" data-id="card1">Купить</button>
                   <button class="product-card__tab" type="submit">В закладки</button>
                 </div>
               </div>
               <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 9000</h4>
-              <del class="product-card__old">32500</del>
-              <b class="product-card__cost">25500</b>
+              <del class="product-card__old">32500 Р.</del>
+              <b class="product-card__price"><span class="product-card__cost">25500</span>Р.</b>
             </li>
             <li class="product-card__item">
-              <ins class="product-card__marker" title="Новинка">New</ins>
+              <ins class="product-card__marker marker" title="Новинка">New</ins>
               <div class="product-card__photo">
-                <img class="product-card__img" src="img/object-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                <img src="img/bosh-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <div class="product-card__btns">
                   <button class="product-card__buy" data-id="card2">Купить</button>
                   <button class="product-card__tab" type="submit">В закладки</button>
                 </div>
               </div>
               <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 3000</h4>
-              <del class="product-card__old">22500</del>
-              <b class="product-card__cost">15500</b>
+              <del class="product-card__old">22500 Р.</del>
+              <b class="product-card__price"><span class="product-card__cost">15500</span>Р.</b>
             </li>
             <li class="product-card__item">
-              <ins class="product-card__marker" title="Новинка">New</ins>
               <div class="product-card__photo">
-                <img class="product-card__img" src="img/object-3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <img src="img/bosh-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 <div class="product-card__btns">
                   <button class="product-card__buy" data-id="card3">Купить</button>
                   <button class="product-card__tab" type="submit">В закладки</button>
                 </div>
               </div>
               <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 6000</h4>
-              <del class="product-card__old">30500</del>
-              <b class="product-card__cost">25500</b>
+              <del class="product-card__old">30500 Р.</del>
+              <b class="product-card__price"><span class="product-card__cost">25500</span>Р.</b>
             </li>
             <li class="product-card__item">
+              <ins class="product-card__marker marker" title="Новинка">New</ins>
               <div class="product-card__photo">
-                <img class="product-card__img" src="img/object-4.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/bosh-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <div class="product-card__btns">
                   <button class="product-card__buy" data-id="card4">Купить</button>
                   <button class="product-card__tab" type="submit">В закладки</button>
                 </div>
               </div>
               <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 2000</h4>
-              <b class="product-card__cost">12500</b>
+              <b class="product-card__price"><span class="product-card__cost">12500</span>Р.</b>
             </li>
           </ul>
         </section>
@@ -250,13 +252,13 @@
           <div class="services__bar">
             <ul class="services__list">
               <li class="services__item">
-                <button class="services__btn--active blue-btn" type="button">Доставка</button>
+                <button class="services__btn--active btn-blue" type="button">Доставка</button>
               </li>
               <li class="services__item">
-                <button class="services__btn blue-btn" type="button">Гарантия</button>
+                <button class="services__btn btn-blue" type="button">Гарантия</button>
               </li>
               <li class="services__item">
-                <button class="services__btn blue-btn" type="button">Кредит</button>
+                <button class="services__btn btn-blue" type="button">Кредит</button>
               </li>
             </ul>
             <div class="services__delivery">
@@ -282,7 +284,7 @@
               </ul>
               <button class="about__btn button" type="button">Подробнее о компании</button>
             </div>
-            <div>
+            <div class="about__contact">
               <h2 class="about__title main-title">Контакты</h2>
               <p class="about__text">Вы можете забрать товар сами, <br> заехав в наш офис:</p>
               <figure class="about__map">
@@ -300,16 +302,13 @@
       <section class="page-footer__top">
         <h2 class="visually-hidden">Новигация подвала</h2>
         <div class="container">
-          <div class="page-footer__wrap">
-            <div class="page-footer__logo">
-              <a href="#">
-                <img src="img/logo-technomart-footer.png" width="220" height="68" alt="Лого Техномарт">
-              </a>
-              <div class="page-footer__contact">
-                <address class="page-footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-                <a href="tel:+78125550555" aria-label="телефон">+7 (812) 555-05-55</a>
-              </div>
+          <div class="page-footer__bar">
+            <div class="page-footer__wrap">
+              <img src="img/logo-technomart-footer.png" width="220" height="68" alt="Лого Техномарт">
+              <address class="page-footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+              <a class="page-footer__tel" href="tel:+78125550555" aria-label="телефон">+7 (812) 555-05-55</a>
             </div>
+
             <div class="footer-nav">
               <ul class="footer-nav__list">
                 <li class="footer-nav__item">
@@ -350,41 +349,43 @@
       <section class="page-footer__bottom">
         <h2 class="visually-hidden">Ссылки подвала</h2>
         <div class="container">
-          <div class="page-footer__wrap">
+          <div class="page-footer__bar">
             <div class="page-footer__copyright">
-              <span class="page-footer__copyright-name">© 2010–2019 Компания «Техномарт»</span>
-              <span class="page-footer__copyright-text">Все права защищены</span>
+              <span>© 2010–2019 Компания «Техномарт»</span>
+              <span>Все права защищены</span>
             </div>
-            <ul class="social-list">
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://vk.com/htmlacademy" target="_blank" aria-label="Страница в Вконтакте">
+            <ul class="footer-social">
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="https://vk.com/htmlacademy" target="_blank" aria-label="Страница в Вконтакте">
                   <svg aria-hidden="true" focusable="false" width="27" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.1 12.5c1-.3 2.2 2 3.5 3 1 .6 1.7.5 1.7.5h3.5s1.8-.2 1-1.6c0-.1-.5-1-2.6-3-2.2-2-1.9-1.8.7-5.3 1.6-2.1 2.3-3.5 2-4-.1-.6-1.3-.4-1.3-.4h-4c-.3 0-.6.1-.8.5 0 0-.6 1.7-1.4 3.1-1.7 3-2.4 3.2-2.7 3-.7-.5-.5-1.8-.5-2.7 0-2.9.4-4.1-.9-4.4-.4-.1-.7-.2-1.8-.2-1.4 0-2.6 0-3.2.3-.5.3-.8.7-.6.8.2 0 .8.1 1.1.6.4.5.4 1.7.4 1.7s.3 3.5-.5 3.9c-.5.3-1.3-.3-2.8-3-.8-1.4-1.4-3-1.4-3L5.2 2l-.6-.2H.8s-.5 0-.7.2c-.2.3 0 .7 0 .7S3 9.5 6.3 13c3 3.1 6.4 3 6.4 3h1.6s.4-.1.7-.4c.2-.2.2-.7.2-.7s0-2 1-2.4z" fill="#fff"/>
                   </svg>
                 </a>
               </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Страница в Фейсбуке">
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Страница в Фейсбуке">
                   <svg aria-hidden="true" focusable="false" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg>
                 </a>
               </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://www.instagram.com/htmlacademy/" target="_blank" aria-label="Страница в Инстаграмме">
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="https://www.instagram.com/htmlacademy/" target="_blank" aria-label="Страница в Инстаграмме">
                   <svg aria-hidden="true" focusable="false" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.2a6.5 6.5 0 1012.6 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/>
                   </svg>
                 </a>
               </li>
             </ul>
-            <div class="page-footer__links">
-              <span class="page-footer__title">Обратная связь:</span>
-              <span class="page-footer__text">mail@htmlacademy.ru</span>
-            </div>
-            <div class="page-footer__site">
-              <span class="page-footer__title">Разработано —</span>
-              <a class="page-footer__text" href="#">htmlacademy.ru</a>
-            </div>
+            <ul class="footer-links">
+              <li class="footer-links__item">
+                <p class="footer-links__title">Обратная связь:</p>
+                <span class="footer-links__text">mail@htmlacademy.ru</span>
+              </li>
+              <li class="footer-links__item">
+                <p class="footer-links__title">Разработано —</p>
+                <a class="footer-links__text" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
