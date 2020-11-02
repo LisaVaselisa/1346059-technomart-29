@@ -115,7 +115,6 @@ function openCart() {
     }
     totalItems += '<tr class="modal-cart__total"><td><strong>Итого</strong></td><td><span>'+ totalSum +'</span> Р.</td><td><span>'+ totalCount +'</span> шт.</td><td></td></tr>';
     totalItems += '<table>';
-    // totalItems += '<button class="modal-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>';
     cartCont.innerHTML = totalItems;
   }
   else {
@@ -178,21 +177,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-
-// if (element.target.className === 'modal-cart__btn-close') {
-//   remove("modal-cart__show");
-// }
-
-// document.onclick = (event) => {
-//   if (event.target.classList.contains('.modal-cart__btn-close')) {
-//     event.preventDefault();
-//     modalCart.classList.remove("modal-cart__show");
-//   }
-
-// }
-
-// closeModalCart.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   modalCart.classList.remove("modal-cart__show");
-// });
