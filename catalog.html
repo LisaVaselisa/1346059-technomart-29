@@ -24,19 +24,13 @@
             </form>
             <ul class="user-menu__list">
               <li class="user-menu__item">
-                <a class="user-menu__link user-menu__link--bookmark" href="#" title="Ваши закладки">
-                  <span>Закладки: 0</span>
-                </a>
+                <a class="user-menu__link user-menu__link--bookmark" href="#" title="Ваши закладки">Закладки: 0</a>
               </li>
-              <li class="user-menu__item user-menu__item--active">
-                <a class="user-menu__link user-menu__link--cart" href="#"  title="Ваша корзина">
-                  <span>Корзина: 10</span>
-                </a>
+              <li class="user-menu__item active">
+                <a class="user-menu__link user-menu__link--cart" href="#"  title="Ваша корзина">Корзина: 10</a>
               </li>
               <li class="user-menu__item user-menu__item--order">
-                <a class="user-menu__link" href="#">
-                  <span>Оформить заказ</span>
-                </a>
+                <a class="user-menu__link" href="#">Оформить заказ</a>
               </li>
             </ul>
           </div>
@@ -125,7 +119,7 @@
           <h2 class="catalog-perforators__title main-title">Перфораторы</h2>
 
           <section class="catalog-perforators__filter">
-            <h3 class="catalog-perforators__filter-title">Фильтр:</h2>
+            <h3 class="catalog-perforators__filter-title">Фильтр:</h3>
             <form class="form" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="form__topic">
                 <legend class="slider__legend legend-title">Цена:</legend>
@@ -165,7 +159,7 @@
                     <label class="form-manufacturer__label" for="dewalt">Dewalt</label>
                   </li>
                   <li class="form-manufacturer__item">
-                    <input class="form-manufacturer__input" type="checkbox" id="hitachi" name="manufacturer">
+                    <input class="form-manufacturer__input" type="checkbox" id="hitachi" name="manufacturer" disabled>
                     <label class="form-manufacturer__label" for="hitachi">Hitachi</label>
                   </li>
                 </ul>
@@ -178,7 +172,7 @@
                     <label class="form-supply__label" for="battery">Аккумуляторные</label>
                   </li>
                   <li class="form-supply__item">
-                    <input class="form-supply__input" type="radio" id="mains" name="supply" value="mains">
+                    <input class="form-supply__input" type="radio" id="mains" name="supply" value="mains" disabled>
                     <label class="form-supply__label" for="mains">Сетевые</label>
                   </li>
                 </ul>
@@ -192,17 +186,17 @@
               <div class="sorty-wrap">
                 <ul class="sorty__list">
                   <li class="sorty__item">
-                    <a class="sorty__link sorty__link--active" rell="nofollow" href="#">По цене</a>
+                    <a class="sorty__link active" href="#">По цене</a>
                   </li>
                   <li class="sorty__item">
-                    <a class="sorty__link" rell="nofollow" href="#">По типу</a>
+                    <a class="sorty__link" href="#">По типу</a>
                   </li>
                   <li class="sorty__item">
-                    <a class="sorty__link" rell="nofollow" href="#">По функционалу</a>
+                    <a class="sorty__link" href="#">По функционалу</a>
                   </li>
                 </ul>
                 <ul class="sorty__arrow">
-                  <li class="sorty__arrow-item sorty__arrow-item--active">
+                  <li class="sorty__arrow-item active">
                     <a href="#" aria-label="вверх"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#c5c5c5" d="M5.5 0L0 10h11z"/></svg></a>
                   </li>
                   <li class="sorty__arrow-item">
@@ -325,7 +319,7 @@
             </ul>
             <ul class="pagination-list">
               <li class="pagination-list__item">
-                <a class="pagination-list__link pagination-list__link--active" href="#">1</a>
+                <a class="pagination-list__link active" href="#">1</a>
               </li>
               <li class="pagination-list__item">
                 <a class="pagination-list__link" href="#">2</a>
@@ -344,7 +338,7 @@
         <div class="container">
           <h2 class="catalog-perforators__promo-title main-title">Пара слов о перфораторах</h2>
           <p class="catalog-perforators__promo-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-            Существуют&nbspэлектромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+            Существуют&nbsp;электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
             В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
           </p>
         </div>
@@ -446,15 +440,13 @@
     </footer>
     <section class="popup-cart popup">
       <h4 class="popup-cart__title">Товар добавлен в корзину!</h4>
-      <ul class="popup-cart__btn">
-        <a class="popup-cart__btn-form button" id="form">Оформить заказ</a>
+      <div class="popup-cart__btn">
+        <button class="popup-cart__btn-form button" id="form" type="submit">Оформить заказ</button>
         <button class="popup-cart__btn-next" type="button">Продолжить покупки</button>
       </div>
       <button class="popup-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="modal-cart popup" id="cart-content">
-      <button class="modal-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
-    </section>
+    <section class="modal-cart popup" id="cart-content"></section>
     <script src="js/cart.js"></script>
   </body>
 </html>

@@ -34,6 +34,7 @@ openMap.addEventListener("click", function (evt) {
   popupMap.classList.add("popup-map__show");
 });
 
+// Закрыть карту
 closePopupMap.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupMap.classList.remove("popup-map__show");

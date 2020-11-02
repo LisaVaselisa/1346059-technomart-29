@@ -27,19 +27,13 @@
 
             <ul class="user-menu__list">
               <li class="user-menu__item">
-                <a class="user-menu__link user-menu__link--bookmark" href="#" title="Ваши закладки">
-                  <span>Закладки: 0</span>
-                </a>
+                <a class="user-menu__link user-menu__link--bookmark" href="#" title="Ваши закладки">Закладки: 0</a>
               </li>
               <li class="user-menu__item">
-                <a class="user-menu__link user-menu__link--cart" href="cart.html"  title="Ваша корзина">
-                  <span>Корзина: 0</span>
-                </a>
+                <a class="user-menu__link user-menu__link--cart" href="cart.html"  title="Ваша корзина">Корзина: 0</a>
               </li>
               <li class="user-menu__item user-menu__item--order">
-                <a class="user-menu__link" href="#">
-                  <span>Оформить заказ</span>
-                </a>
+                <a class="user-menu__link" href="#">Оформить заказ</a>
               </li>
             </ul>
           </div>
@@ -123,20 +117,33 @@
             <a class="catalog__link button" href="#">Бесплатно</a>
           </article>
           <article class="slider">
-            <img class="slider__img" src="img/slide-image.jpg" width="620" height="266" alt="фоновая картинка">
-            <div class="slider__wrap">
-              <div class="slider__info">
-                <p class="slider__title">Перфораторы</p>
-                <p class="slider__text">Настоящие мужские игрушки</p>
-              </div>
-                <button class="slider__arrow slider__arrow--left" type="button"></button>
-                <button class="slider__arrow slider__arrow--right" type="button"></button>
-                <a class="slider__link button" href="#">Открыть каталог</a>
+            <ul class="slider__list">
+              <li class="slider__item active">
+                <img class="slider__img" src="img/slide-image.jpg" width="620" height="266" alt="Строитель работает с перфоратором">
+                <div class="slider__info">
+                  <h3 class="slider__title">Перфораторы</h3>
+                  <p class="slider__text">Настоящие мужские игрушки</p>
+                </div>
+                <a class="slider__link button" href="catalog.html">Открыть каталог</a>
+              </li>
+              <li class="slider__item">
+                <img class="slider__img" src="img/slide-image-2.jpg" width="620" height="266" alt="Строитель работает с дрелью">
+                <div class="slider__info">
+                  <h3 class="slider__title">Дрели</h3>
+                  <p class="slider__text">Соседям на радость!</p>
+                </div>
+                <a class="slider__link button" href="catalog.html">Открыть каталог</a>
+              </li>
+            </ul>
+            <button class="slider__arrow slider__arrow--left" type="button" aria-label="Предыдущий слайд"></button>
+            <button class="slider__arrow slider__arrow--right" type="button" aria-label="Следующий слайд"></button>
+            <div class="slider__paginations">
+              <div class="slider__pagination active"></div>
+              <div class="slider__pagination"></div>
             </div>
           </article>
         </section>
-
-         <section class="products">
+        <section class="products">
           <div class="products__info">
             <h2 class="products__info-title main-title">Популярные товары:</h2>
             <a class="products__info-btn button" href="#">все популярные товары</a>
@@ -193,6 +200,7 @@
             </li>
           </ul>
         </section>
+
         <section class="manufacturers">
           <div class="manufacturers__info">
             <h2 class="manufacturers__info-title main-title">Популярные производители:</h2>
@@ -250,22 +258,31 @@
              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="services__bar">
-            <ul class="services__list">
-              <li class="services__item">
-                <button class="services__btn--active btn-blue" type="button">Доставка</button>
-              </li>
-              <li class="services__item">
-                <button class="services__btn btn-blue" type="button">Гарантия</button>
-              </li>
-              <li class="services__item">
-                <button class="services__btn btn-blue" type="button">Кредит</button>
-              </li>
-            </ul>
-            <div class="services__delivery">
-              <h2 class="services__delivery-title main-title">Доставка</h2>
-              <p class="services__delivery-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
+            <div class="services__btns">
+                <button class="services__btn services__btn--delivery active" type="button">Доставка</button>
+                <button class="services__btn services__btn--guarantee" type="button">Гарантия</button>
+                <button class="services__btn services__btn--guarantee" type="button">Кредит</button>
             </div>
+
+            <div>
+              <ul class="services__list">
+                <li class="services__item services__item--delivery active">
+                  <h2 class="services__name main-title">Доставка</h2>
+                  <p class="services__info">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
+                </li>
+                <li class="services__item services__item--guarantee">
+                  <h2 class="services__name main-title">Гарантия</h2>
+                  <p class="services__info">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                </li>
+                <li class="services__item services__item--credit">
+                  <h2 class="services__name main-title">Кредит</h2>
+                  <p class="services__info">Залезть в долговую яму стало проще! <br>Кредитные консультанты придут вам на помощь.</p>
+                  <a class="services__btn-credit button" href="#">Отправить заявку</a>
+                </li>
+              </ul>
+
+            </div>
+
           </div>
         </div>
       </section>
@@ -392,26 +409,26 @@
     </footer>
 
     <section class="popup popup-contact">
-      <fopm class="popup-contact__form" action="https://echo.htmlacademy.ru" method="post">
-        <legend class="visually-hidden">Форма связи с нами</legend>
+      <form class="popup-contact__form" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="visually-hidden">Форма связи с нами</h2>
         <div class="popup-contact__wrap">
           <ul class="popup-contact__list">
             <li class="popup-contact__item">
-              <label class="popup-contact__label" for="user-name">Ваше имя:</label>
-              <input class="popup-contact__input" id="user-name" name="name" type="text" placeholder="Имя Фамилия" required="">
+              <label class="popup-contact__label" for="name">Ваше имя:</label>
+              <input class="popup-contact__input" id="name" type="text" name="user-name" placeholder="Имя Фамилия" required="">
             </li>
             <li class="popup-contact__item">
-              <label class="popup-contact__label" for="user-mail">Ваш e-mail:</label>
-              <input class="popup-contact__input" id="user-mail" name="email" type="email" placeholder="email@example.com" required="">
+              <label class="popup-contact__label" for="mail">Ваш e-mail:</label>
+              <input class="popup-contact__input" type="text" id="mail" name="user-mail" placeholder="email@example.com" required="">
             </li>
           </ul>
           <p class="popup-contact__textarea-title">Текст письма:</p>
-          <textarea class="popup-contact__textarea" name="comment" placeholder="В свободной форме" required>В свободной форме</textarea>
+          <textarea class="popup-contact__textarea" name="coment" id="comment" placeholder="В свободной форме"></textarea>
         </div>
         <div class="popup-contact__wrap-grey">
           <button class="popup-contact__btn button" type="submit">Отправить</button>
         </div>
-      </fopm>
+      </form>
       <button class="popup-contact__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
 
@@ -423,15 +440,13 @@
 
     <section class="popup-cart popup">
       <h4 class="popup-cart__title">Товар добавлен в корзину!</h4>
-      <ul class="popup-cart__btn">
-        <a class="popup-cart__btn-form button" id="form">Оформить заказ</a>
+      <div class="popup-cart__btn">
+        <button class="popup-cart__btn-form button" id="form" type="submit">Оформить заказ</button>
         <button class="popup-cart__btn-next" type="button">Продолжить покупки</button>
       </div>
       <button class="popup-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="modal-cart popup" id="cart-content">
-      <button class="modal-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
-    </section>
+    <section class="modal-cart popup" id="cart-content"></section>
 
     <script src="js/cart.js"></script>
     <script src="js/popup.js"></script>
