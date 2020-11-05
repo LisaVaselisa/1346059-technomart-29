@@ -8,23 +8,21 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrap">
         <div class="container">
-
           <div class="user-menu">
             <a class="user-menu__logo">
               <img src="img/logo-technomart-header.svg" width="108" height="18" alt="Лого Техномарт">
             </a>
             <form class="form-search" role="search" method="get" action="https://htmlacademy.ru">
-              <input class="form-search__input" type="text" name="search" placeholder="Поиск">
+              <label class="visually-hidden" for="search">Поиск по сайту</label>
+              <input class="form-search__input" id="search" name="search" type="text" placeholder="Поиск">
               <svg class="form-search__svg" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
               </svg>
             </form>
-
             <ul class="user-menu__list">
               <li class="user-menu__item">
                 <a class="user-menu__link user-menu__link--bookmark" href="#" title="Ваши закладки">Закладки: 0</a>
@@ -39,7 +37,6 @@
           </div>
         </div>
       </div>
-
       <div class="container">
         <div class="info-bar">
           <p class="info-bar__text">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
@@ -47,7 +44,6 @@
             <a class="info-bar__tel" href="tel:+78125550555" aria-label="телефон">+7 (812) 555-05-55</a>
             <address class="info-bar__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
-
           <ul class="regiatration-list registration">
             <li class="regiatration-list__item">
               <a class="regiatration-list__link regiatration-list__link--exit" href="#">
@@ -90,13 +86,11 @@
         </nav>
       </div>
     </header>
-
     <main>
       <div class="container">
         <section class="catalog">
           <h1 class="visually-hidden">Каталог товаров и доставка</h1>
-          <article class="catalog__item catalog__item--materials">
-            <ins class="catalog__item__marker marker" title="Новинка">New</ins>
+          <article class="catalog__item catalog__item--materials marker-new">
             <h3 class="catalog__title middle-title">Материалы</h3>
             <a class="catalog__link button" href="#">На любой вкус</a>
           </article>
@@ -138,73 +132,86 @@
             <button class="slider__arrow slider__arrow--left" type="button" aria-label="Предыдущий слайд"></button>
             <button class="slider__arrow slider__arrow--right" type="button" aria-label="Следующий слайд"></button>
             <div class="slider__paginations">
-              <div class="slider__pagination active"></div>
-              <div class="slider__pagination"></div>
+              <button class="slider__pagination active" type="button"></button>
+              <button class="slider__pagination" type="button"></button>
             </div>
           </article>
         </section>
         <section class="products">
           <div class="products__info">
             <h2 class="products__info-title main-title">Популярные товары:</h2>
-            <a class="products__info-btn button" href="#">все популярные товары</a>
+            <a class="products__info-link button" href="#">все популярные товары</a>
           </div>
           <ul class="product-card">
             <li class="product-card__item">
               <div class="product-card__photo">
-                <img src="img/bosh-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+                <a class="product-card__img" href="#">
+                  <img src="img/bosh-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+                </a>
                 <div class="product-card__btns">
-                  <button class="product-card__buy" data-id="card1">Купить</button>
-                  <button class="product-card__tab" type="submit">В закладки</button>
+                  <a class="product-card__buy" href="#nowhere" data-id="card1">Купить</a>
+                  <button class="product-card__tab" type="button">В закладки</button>
                 </div>
               </div>
-              <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 9000</h4>
+              <h4 class="product-card__title name-product">
+                <a class="product-card__title-link" href="#nowhere">Перфоратор BOSCH BFG 9000</a>
+              </h4>
               <del class="product-card__old">32500 Р.</del>
               <b class="product-card__price"><span class="product-card__cost">25500</span>Р.</b>
             </li>
-            <li class="product-card__item">
-              <ins class="product-card__marker marker" title="Новинка">New</ins>
+            <li class="product-card__item marker-new">
               <div class="product-card__photo">
-                <img src="img/bosh-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+                <a class="product-card__img" href="#">
+                  <img src="img/bosh-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+                </a>
                 <div class="product-card__btns">
-                  <button class="product-card__buy" data-id="card2">Купить</button>
-                  <button class="product-card__tab" type="submit">В закладки</button>
+                  <a class="product-card__buy" href="#nowhere" data-id="card2">Купить</a>
+                  <button class="product-card__tab" type="button">В закладки</button>
                 </div>
               </div>
-              <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 3000</h4>
+              <h4 class="product-card__title name-product">
+                <a class="product-card__title-link" href="#nowhere">Перфоратор BOSCH BFG 3000</a>
+              </h4>
               <del class="product-card__old">22500 Р.</del>
               <b class="product-card__price"><span class="product-card__cost">15500</span>Р.</b>
             </li>
             <li class="product-card__item">
               <div class="product-card__photo">
-                <img src="img/bosh-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+                <a class="product-card__img" href="#">
+                  <img src="img/bosh-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+                </a>
                 <div class="product-card__btns">
-                  <button class="product-card__buy" data-id="card3">Купить</button>
-                  <button class="product-card__tab" type="submit">В закладки</button>
+                  <a class="product-card__buy" href="#nowhere" data-id="card3">Купить</a>
+                  <button class="product-card__tab" type="button">В закладки</button>
                 </div>
               </div>
-              <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 6000</h4>
+              <h4 class="product-card__title name-product">
+                <a class="product-card__title-link" href="#nowhere"> Перфоратор BOSCH BFG 6000</a>
+              </h4>
               <del class="product-card__old">30500 Р.</del>
               <b class="product-card__price"><span class="product-card__cost">25500</span>Р.</b>
             </li>
-            <li class="product-card__item">
-              <ins class="product-card__marker marker" title="Новинка">New</ins>
+            <li class="product-card__item marker-new">
               <div class="product-card__photo">
-                <img src="img/bosh-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+                <a class="product-card__img" href="#">
+                  <img src="img/bosh-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+                </a>
                 <div class="product-card__btns">
-                  <button class="product-card__buy" data-id="card4">Купить</button>
-                  <button class="product-card__tab" type="submit">В закладки</button>
+                  <a class="product-card__buy" href="#nowhere" data-id="card4">Купить</a>
+                  <button class="product-card__tab" type="button">В закладки</button>
                 </div>
               </div>
-              <h4 class="product-card__title name-product">Перфоратор BOSCH BFG 2000</h4>
+              <h4 class="product-card__title name-product">
+                <a class="product-card__title-link" href="#nowhere">Перфоратор BOSCH BFG 2000</a>
+              </h4>
               <b class="product-card__price"><span class="product-card__cost">12500</span>Р.</b>
             </li>
           </ul>
         </section>
-
         <section class="manufacturers">
           <div class="manufacturers__info">
             <h2 class="manufacturers__info-title main-title">Популярные производители:</h2>
-            <button class="manufacturers__info-btn button">все производители</button>
+            <a class="manufacturers__info-link button" href="#">все производители</a>
           </div>
           <ul class="manufacturers__list">
             <li class="manufacturers__item">
@@ -250,7 +257,6 @@
           </ul>
         </section>
       </div>
-
       <section class="services">
         <div class="container">
           <h2 class="services__title main-title">Сервисы</h2>
@@ -263,7 +269,6 @@
                 <button class="services__btn services__btn--guarantee" type="button">Гарантия</button>
                 <button class="services__btn services__btn--guarantee" type="button">Кредит</button>
             </div>
-
             <div>
               <ul class="services__list">
                 <li class="services__item services__item--delivery active">
@@ -280,13 +285,10 @@
                   <a class="services__btn-credit button" href="#">Отправить заявку</a>
                 </li>
               </ul>
-
             </div>
-
           </div>
         </div>
       </section>
-
       <div class="container">
         <section class="about">
           <div class="about__bar">
@@ -299,33 +301,32 @@
                 <li class="about__item">Автотрейдинг</li>
                 <li class="about__item">ЖелДорЭкспедиция</li>
               </ul>
-              <button class="about__btn button" type="button">Подробнее о компании</button>
+              <a class="about__link button" href="#">Подробнее о компании</a>
             </div>
             <div class="about__contact">
               <h2 class="about__title main-title">Контакты</h2>
               <p class="about__text">Вы можете забрать товар сами, <br> заехав в наш офис:</p>
-              <figure class="about__map">
-                <h2 class="visually-hidden">Карта с адресом местарасположения компании</h2>
-                <img class="about__map-img" src="img/map.png" width="300" height="158" alt="Карта с адресом компании Техномарт">
-              </figure>
-              <button class="about__open-btn button" type="button">Заблудились? Напишите нам!</button>
+              <a class="about__map" href="#">
+                <img class="about__map-img" src="img/map.png" width="300" height="158" alt="Карта с адресом компании Техномарт: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+              </a>
+              <a class="about__open-btn button" href="#">Заблудились? Напишите нам!</a>
             </div>
           </div>
         </section>
       </div>
     </main>
-
     <footer class="page-footer">
       <section class="page-footer__top">
         <h2 class="visually-hidden">Новигация подвала</h2>
         <div class="container">
           <div class="page-footer__bar">
             <div class="page-footer__wrap">
-              <img src="img/logo-technomart-footer.png" width="220" height="68" alt="Лого Техномарт">
+              <a class="page-footer__link">
+                <img src="img/logo-technomart-footer.png" width="220" height="68" alt="Лого Техномарт">
+              </a>
               <address class="page-footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
               <a class="page-footer__tel" href="tel:+78125550555" aria-label="телефон">+7 (812) 555-05-55</a>
             </div>
-
             <div class="footer-nav">
               <ul class="footer-nav__list">
                 <li class="footer-nav__item">
@@ -362,7 +363,6 @@
           </div>
         </div>
       </section>
-
       <section class="page-footer__bottom">
         <h2 class="visually-hidden">Ссылки подвала</h2>
         <div class="container">
@@ -382,7 +382,8 @@
               <li class="footer-social__item">
                 <a class="footer-social__link" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Страница в Фейсбуке">
                   <svg aria-hidden="true" focusable="false" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg>
+                    <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/>
+                  </svg>
                 </a>
               </li>
               <li class="footer-social__item">
@@ -396,7 +397,7 @@
             <ul class="footer-links">
               <li class="footer-links__item">
                 <p class="footer-links__title">Обратная связь:</p>
-                <span class="footer-links__text">mail@htmlacademy.ru</span>
+                <a class="footer-links__text" href="https://htmlacademy.ru/contacts">mail@htmlacademy.ru</a>
               </li>
               <li class="footer-links__item">
                 <p class="footer-links__title">Разработано —</p>
@@ -407,7 +408,6 @@
         </div>
       </section>
     </footer>
-
     <section class="popup popup-contact">
       <form class="popup-contact__form" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="visually-hidden">Форма связи с нами</h2>
@@ -422,7 +422,7 @@
               <input class="popup-contact__input" type="text" id="mail" name="user-mail" placeholder="email@example.com" required="">
             </li>
           </ul>
-          <p class="popup-contact__textarea-title">Текст письма:</p>
+          <label class="popup-contact__textarea-title" for="comment">Текст письма:</label>
           <textarea class="popup-contact__textarea" name="coment" id="comment" placeholder="В свободной форме"></textarea>
         </div>
         <div class="popup-contact__wrap-grey">
@@ -431,24 +431,20 @@
       </form>
       <button class="popup-contact__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
-
     <section class="popup popup-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="766" height="560" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
       <button class="popup-map__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
-
     <section class="popup-cart popup">
       <h4 class="popup-cart__title">Товар добавлен в корзину!</h4>
       <div class="popup-cart__btn">
-        <button class="popup-cart__btn-form button" id="form" type="submit">Оформить заказ</button>
+        <button class="popup-cart__btn-form button" id="form" type="button">Оформить заказ</button>
         <button class="popup-cart__btn-next" type="button">Продолжить покупки</button>
       </div>
       <button class="popup-cart__btn-close btn-close" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="modal-cart popup" id="cart-content"></section>
-
-    <script src="js/cart.min.js"></script>
     <script src="js/popup.min.js"></script>
+    <script src="js/cart.min.js"></script>
   </body>
 </html>

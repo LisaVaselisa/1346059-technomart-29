@@ -5,7 +5,7 @@ var openPopupContact = document.querySelector('.about__open-btn');
 var popupContact = document.querySelector('.popup-contact');
 var closePopupContact = popupContact.querySelector('.popup-contact__btn-close');
 
-var openMap = document.querySelector('.about__map-img');
+var openMap = document.querySelector('.about__map');
 var popupMap = document.querySelector('.popup-map');
 var closePopupMap = popupMap.querySelector('.popup-map__btn-close');
 
