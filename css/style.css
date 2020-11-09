@@ -55,7 +55,7 @@
   --form-grey: #c5c5c5;
   --form-check: 0 3px 0 0 #ffffff, inset 0 -3px 0 0 #ffffff;
 
-  /* slider */
+  /* form slider */
   --slider-scale: #d7dcde;
   --slider-toggle-border: 8px solid #ffffff;
   --slider-toggle-point: #ababab;
@@ -101,7 +101,7 @@ html {
 }
 
 .page-body {
-  font-family: "Cuprum", "sans-serif";
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -192,7 +192,7 @@ img {
 }
 
 .name-product {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   line-height: 20px;
 }
 
@@ -951,7 +951,7 @@ img {
 
 .product-card,
 .page-catalog__result-perforators {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   text-align: center;
 }
 
@@ -991,7 +991,7 @@ img {
 
 .product-card__btns {
   position: absolute;
-  font-family: "Cuprum", "sans-serif";
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1177,7 +1177,7 @@ img {
 
 .services__text,
 .services__info {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 }
 
@@ -1331,7 +1331,7 @@ margin-bottom: 28px;
 }
 
 .about__text {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   margin: 0;
   margin-top: 25px;
@@ -1364,13 +1364,10 @@ margin-bottom: 28px;
 
 .about__map {
   display: block;
+  background-color: var(--body-bluelight);
   margin-top: 32px;
   margin-bottom: 25px;
-}
-
-.about__map-img {
-  display: block;
-  background-color: var(--body-bluelight);
+  width: 300px;
   height: 158px;
 }
 
@@ -1432,9 +1429,6 @@ margin-bottom: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; */
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -1572,7 +1566,7 @@ margin-bottom: 28px;
 /* ------------------------breadcrumbs---------------------- */
 
 .breadcrumbs-list {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1615,7 +1609,7 @@ margin-bottom: 28px;
 /* ---------------------form--------------------- */
 
 .catalog-perforators__filter {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -1637,12 +1631,13 @@ margin-bottom: 28px;
   border: none;
 }
 
-.slider__legend  {
+.form-slider__legend  {
   padding: 12px 0;
 }
-/* -------slider------ */
 
-.slider__bar {
+/* -------form slider------ */
+
+.form-slider__bar {
   position: relative;
   background-color: var(--sorty-basic);
   border-radius: 2px;
@@ -1651,14 +1646,14 @@ margin-bottom: 28px;
   padding: 39px 20px;
 }
 
-.slider__scale {
+.form-slider__scale {
   position: relative;
   background: var(--slider-scale);
   width: 180px;
   height: 2px;
 }
 
-.slider__scale::before {
+.form-slider__scale::before {
   position: absolute;
   content: "";
   width: 80%;
@@ -1667,7 +1662,7 @@ margin-bottom: 28px;
   left: 0;
 }
 
-.slider__toggle {
+.form-slider__toggle {
   position: absolute;
   content: "";
   -webkit-box-sizing: content-box;
@@ -1684,28 +1679,28 @@ margin-bottom: 28px;
   cursor: pointer;
 }
 
-.slider__toggle--min {
+.form-slider__toggle--min {
   left: 0;
 }
 
-.slider__toggle--max {
+.form-slider__toggle--max {
   left: 77%;
 }
 
-.slider__controls {
+.form-slider__controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 24px;
 }
 
-.slider__label {
+.form-slider__label {
   position: relative;
   line-height: 0px;
   cursor: pointer;
 }
 
-.slider__label--min::before {
+.form-slider__label--min::before {
   position: absolute;
   content: "";
   background: var(--slider-controls);
@@ -1715,7 +1710,7 @@ margin-bottom: 28px;
   left: 105px;
 }
 
-.slider__input {
+.form-slider__input {
   font-size: 17px;
   line-height: 18px;
   text-align: center;
@@ -1727,7 +1722,7 @@ margin-bottom: 28px;
   margin-top: 9px;
 }
 
-.slider__input--min {
+.form-slider__input--min {
   margin-right: 30px;
 }
 
@@ -1737,12 +1732,12 @@ margin-bottom: 28px;
   padding-bottom: 8px;
 }
 
-.manufacturer__legend,
+.form-manufacturer__legend,
 .form-supply__legend {
   border-top: var(--body-border);
 }
 
-.manufacturer__legend {
+.form-manufacturer__legend {
   padding-top: 15px;
   padding-bottom: 18px;
 }
@@ -1863,7 +1858,7 @@ margin-bottom: 28px;
 
 .sorty__title,
 .sorty__link {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   color: var(--body-black);
   text-transform: uppercase;
@@ -1937,7 +1932,7 @@ margin-bottom: 28px;
 }
 
 .pagination-list {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1976,14 +1971,14 @@ margin-bottom: 28px;
   border: 1px solid var(--body-red);
 }
 
-.catalog-perforators__promo{
+.perforators-promo {
   background-color: var(--body-greylight);
   padding-top: 40px;
   padding-bottom: 57px;
 }
 
-.catalog-perforators__promo-text {
-  font-family: "PT Sans", "Arial", "sans-serif";
+.perforators-promo__text {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   padding-right: 25px;
 }
@@ -2126,7 +2121,7 @@ margin-bottom: 28px;
 
 .popup-contact__input,
 .popup-contact__textarea {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   color: var(--about-border-grey);
   border: 2px solid var(--form-grey);

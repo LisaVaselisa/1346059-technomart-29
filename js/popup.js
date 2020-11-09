@@ -9,42 +9,42 @@ var openMap = document.querySelector('.about__map');
 var popupMap = document.querySelector('.popup-map');
 var closePopupMap = popupMap.querySelector('.popup-map__btn-close');
 
-openPopupContact.addEventListener("click", function (evt) {
+openPopupContact.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popupContact.classList.add("popup-contact__show");
+  popupContact.classList.add('popup-contact__show');
 });
 
-closePopupContact.addEventListener("click", function (evt) {
+closePopupContact.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popupContact.classList.remove("popup-contact__show");
+  popupContact.classList.remove('popup-contact__show');
 });
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (popupContact.classList.contains("popup-contact__show")) {
+window.addEventListener('keydown', function (evt) {
+  if (evt.key === 27) {
+    if (popupContact.classList.contains('popup-contact__show')) {
       evt.preventDefault();
-      popupContact.classList.remove("popup-contact__show");
+      popupContact.classList.remove('popup-contact__show');
     }
   }
 });
 
 // Открыть карту
-openMap.addEventListener("click", function (evt) {
+openMap.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popupMap.classList.add("popup-map__show");
+  popupMap.classList.add('popup-map__show');
 });
 
 // Закрыть карту
-closePopupMap.addEventListener("click", function (evt) {
+closePopupMap.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popupMap.classList.remove("popup-map__show");
+  popupMap.classList.remove('popup-map__show');
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (popupMap.classList.contains("popup-map__show")) {
+    if (popupMap.classList.contains('popup-map__show')) {
       evt.preventDefault();
-      popupMap.classList.remove("popup-map__show");
+      popupMap.classList.remove('popup-map__show');
     }
   }
 });
